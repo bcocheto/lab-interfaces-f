@@ -9,12 +9,12 @@
 
 /* fontes custom */
 @font-face {
-  font-family: 'M';
-  src: url('../fonts/Myriad-Regular.ttf') format("ttf");
+  font-family: "Myriad";
+  src: url('../fonts/Myriad-Regular.ttf') format("truetype");
 }
 @font-face {
-  font-family: 'M-B';
-  src: url('../fonts/Myriad-Roman.otf') format("otf");
+  font-family: "Myriad-B";
+  src: url('../fonts/Myriad-Bold.ttf') format("truetype");
 }
 
 /* body */
@@ -22,20 +22,10 @@
 body{
     margin: 0px;
     padding: 0px;
-    display: grid;
-    grid-template-areas:
-    "header"
-     "content1"
-     "content2" 
-     "content3" 
-     "content4" 
-     "content5" 
-     "content6";
-
 }
 
 /* header */
-header{
+#header{
     grid-area: header;
     color: #FAFAFA;
     height: 96px;
@@ -57,7 +47,7 @@ header{
 .menus{
     grid-template-areas: "home menu1 menu2 menu3";
     margin-top: 30px;
-    margin-right: 5vw;
+    margin-right: 200px;
 
 }
 
@@ -70,7 +60,7 @@ header{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family: "M";
+	font-family: "Myriad";
 	font-size:13px;
 	padding:6px 24px;
 	text-decoration:none;
@@ -96,7 +86,7 @@ header{
 	display:inline-block;
 	cursor:pointer;
 	color:#868686;
-	font-family: "M";
+	font-family: "Myriad";
 	font-size:13px;
 	padding:6px 24px;
 	text-decoration:none;
@@ -113,7 +103,7 @@ header{
 	display:inline-block;
 	cursor:pointer;
 	color:#868686;
-	font-family: "M";
+	font-family: "Myriad";
 	font-size:13px;
 	padding:6px 24px;
 	text-decoration:none;
@@ -130,7 +120,7 @@ header{
 	display:inline-block;
 	cursor:pointer;
 	color:#868686;
-	font-family: "M";
+	font-family: "Myriad";
 	font-size:13px;
 	padding:6px 24px;
 	text-decoration:none;
@@ -138,5 +128,183 @@ header{
 
 }
 
-/* body content */
+/* body content-1 */
 
+#content-1{
+    grid-area: content1;
+}
+
+#img-1{
+    display: block;
+    background: url('../img/img-1.svg') no-repeat center center;
+    margin-top: 5px;
+    width: 100%;
+    height: auto;
+}
+
+/* body content-2 */
+
+#content-2{
+    margin-top: 94px;
+    grid-area: content2;
+    display: grid;
+    grid-template-areas: "c2-title" "c2-box";
+}
+
+#c2-title-box{
+    grid-area: c2-title;
+    display: grid;
+    grid-template-areas: "c2-b-t" "c2-b-s";
+    justify-self: center;
+}
+
+#c2-title{
+    grid-area: c2-b-t;
+    font-family: "Myriad-B";
+    font-size: 30px;
+    justify-self: center;
+}
+#c2-sub{
+    grid-area: c2-b-s;
+    font-family: "Myriad";
+    font-size: 16px;
+}
+
+#c2-box{
+    grid-area: c2-box;
+    display: flex;
+    /* grid-template-areas: "b1 b2" "b3 b4"; */
+    flex-wrap: wrap;
+    max-width: 1056.28px;
+    flex-direction: row;
+    margin-left: 15vw;
+    justify-content: space-around;
+}
+
+#b1{
+    grid-area: b1;
+    display: grid;
+    max-width: 446.06px;
+    margin-top: 50px;
+    grid-template-areas: "i1 t1""i1 s1";
+}
+
+#i1{
+    grid-area: i1;
+    display: block;
+    background: url(../icons/rhoncus.svg);
+    height: 42px;
+    width: 41px;
+    margin-right: 20px;
+}
+
+#t1{
+    grid-area: t1;
+    font-family: "Myriad";
+    font-size: 16px;
+}
+
+#s1{
+    grid-area: s1;
+    margin-top: 12px;
+    font-family: "Myriad";
+    font-size: 13px;
+}
+
+#b2{
+    grid-area: b2;
+    display: grid;
+    margin-top: 50px;
+    max-width: 446.06px;
+    grid-template-areas: "i2 t2""i2 s2";
+}
+
+#i2{
+    grid-area: i2;
+    display: block;
+    background: url(../icons/mattis.svg);
+    height: 46px;
+    width: 44px;
+    margin-right: 20px;
+
+}
+
+#t2{
+    grid-area: t2;
+    font-family: "Myriad";
+    font-size: 16px;
+}
+
+
+#s2{
+    grid-area: s2;
+    margin-top: 12px;
+    font-family: "Myriad";
+    font-size: 13px;
+}
+
+#b3{
+    grid-area: b3;
+    display: grid;
+        margin-top: 27.6px;
+
+    max-width: 446.06px;
+    grid-template-areas: "i3 t3""i3 s3";
+}
+
+#i3{
+    grid-area: i3;
+    display: block;
+    background: url(../icons/elementum.svg);
+    height: 47px;
+    width: 38px;
+    margin-right: 20px;
+
+}
+
+#t3{
+    grid-area: t3;
+    font-family: "Myriad";
+    font-size: 16px;
+}
+
+
+#s3{
+    grid-area: s3;
+    font-family: "Myriad";
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+#b4{
+        margin-top: 27.6px;
+
+    grid-area: b4;
+    display: grid;
+    max-width: 446.06px;
+    grid-template-areas: "i4 t4""i4 s4";
+}
+
+#i4{
+    grid-area: i4;
+    display: block;
+    background: url(../icons/mauris.svg);
+    height: 47px;
+    width: 47px;
+    margin-right: 20px;
+
+}
+
+#t4{
+    grid-area: t4;
+    font-family: "Myriad";
+    font-size: 16px;
+}
+
+
+#s4{
+    grid-area: s4;
+    margin-top: 12px;
+    font-family: "Myriad";
+    font-size: 13px;
+}
