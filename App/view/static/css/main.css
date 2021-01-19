@@ -1,0 +1,142 @@
+/* variáveis globais */
+
+:root{
+    --icolor: #FAFAFA;
+    --iheight: 48px;
+    --iwidth: 23px;
+    
+}
+
+/* fontes custom */
+@font-face {
+  font-family: 'M';
+  src: url('../fonts/Myriad-Regular.ttf') format("ttf");
+}
+@font-face {
+  font-family: 'M-B';
+  src: url('../fonts/Myriad-Roman.otf') format("otf");
+}
+
+/* body */
+
+body{
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-areas:
+    "header"
+     "content1"
+     "content2" 
+     "content3" 
+     "content4" 
+     "content5" 
+     "content6";
+
+}
+
+/* header */
+header{
+    grid-area: header;
+    color: #FAFAFA;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo{
+    display: block;
+    background: url('../img/logo.svg') no-repeat center center;
+    height: 58px;
+    width: 147px;
+    margin-top: 19px;
+    margin-left: 5vw;
+}
+
+.menus{
+    grid-template-areas: "home menu1 menu2 menu3";
+    margin-top: 30px;
+    margin-right: 5vw;
+
+}
+
+#home{
+    grid-area: home;
+    box-shadow:inset 0px 1px 0px 0px #e76824;
+	background-color:#e76824;
+	border-radius:2px;
+	border:2px solid #e76824;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "M";
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e76824;
+    margin: 5px;
+}
+
+#home:hover{
+    background-color:#eb8f61;
+}
+
+#home:active{
+    position:relative;
+	top:1px;
+}
+
+#menu1{
+    grid-area: menu1;
+    box-shadow:inset 0px 1px 0px 0px #FAFAFA;
+	background-color:#FAFAFA;
+	border-radius:2px;
+	border:2px solid #FAFAFA;
+	display:inline-block;
+	cursor:pointer;
+	color:#868686;
+	font-family: "M";
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+    margin: 5px;
+
+}
+
+#menu2{
+    grid-area: menu2;
+    box-shadow:inset 0px 1px 0px 0px #FAFAFA;
+	background-color:#FAFAFA;
+	border-radius:2px;
+	border:2px solid #FAFAFA;
+	display:inline-block;
+	cursor:pointer;
+	color:#868686;
+	font-family: "M";
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+    margin: 5px;
+
+}
+
+#menu3{
+    grid-area: menu3;
+    box-shadow:inset 0px 1px 0px 0px #FAFAFA;
+	background-color:#FAFAFA;
+	border-radius:2px;
+	border:2px solid #FAFAFA;
+	display:inline-block;
+	cursor:pointer;
+	color:#868686;
+	font-family: "M";
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+    margin: 5px;
+
+}
+
+/* body content */
+
