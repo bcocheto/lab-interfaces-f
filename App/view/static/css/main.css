@@ -22,6 +22,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    height: 200vh;
 }
 
 /* header */
@@ -307,4 +308,59 @@ body{
     margin-top: 12px;
     font-family: "Myriad";
     font-size: 13px;
+}
+
+/* body content 3 */
+
+#content-3{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    background-color: #FFC40C;
+}
+
+#c3-img{
+    display: block;
+    background: url(../img/sobre.jpg) no-repeat center center;
+    max-width: 851px;
+    min-width: 200px;
+    min-height: 500px;
+    max-height: 621px;
+}
+
+#c3-grid{
+    display: grid;
+    margin-top: 85px;
+    margin-left: 40px;
+    grid-template-areas: "c3-t" "c3-tx" "c3-info";
+    grid-template-columns: 1fr;
+}
+
+#c3-t{
+    grid-area: c3-t;
+    font-family: Arial;
+    font-weight: bold;
+    color: var(--icolor);
+    font-size: 30px;
+}
+
+#c3-tx{
+    margin-top: 19px;
+    color: var(--icolor);
+    grid-area: c3-tx;
+    font-family: Arial;
+    font-size: 14px;
+
+}
+
+#c3-info{
+    /* n sei pq n quer funcionar */
+    margin-top: 20px;
+    margin-bottom: 70px;
+    grid-area: c3-info;
+    background: url(../img/layout-onepage-graphs.png) no-repeat center center;
+    max-width: 580px;
+    min-width: 200px;
+    max-height: 75px;
+    min-height: 50px;
 }
