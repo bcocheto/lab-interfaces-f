@@ -140,6 +140,7 @@ body{
     background: url('../img/img-1.svg') no-repeat center center;
     margin-top: 5px;
     width: 100%;
+    max-width: 100vw;
     height: auto;
 }
 
@@ -363,4 +364,157 @@ body{
     min-width: 200px;
     max-height: 75px;
     min-height: 50px;
+}
+
+#content-4{
+    margin-top: 100px;
+    grid-area: content4;
+    display: grid;
+    grid-template-areas: "c4-title" "c4-content" "c4-button";
+}
+
+#c4-title{
+    grid-area: c4-title;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 30px;
+    justify-self: center;
+}
+
+#c4-content{
+    grid-area: c4-content;
+    display: grid;
+    grid-area: "c4-icons" "c4-texts";
+}
+
+#c4-icons{
+    grid-area: c4-icons;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#c4-i-1{
+    display: block;
+    background: url(../icons/world.svg) no-repeat center center;
+    height: 86px;
+    width: 86px;
+}
+
+#c4-i-2{
+    display: block;
+    background: url(../icons/top-arrow.svg) no-repeat center center;
+    width: 127.6px;
+    height: 36px;
+}
+
+#c4-i-3{
+    display: block;
+    background: url(../icons/market-car.svg) no-repeat center center;
+    width: 72px;
+    height: 74px;
+}
+
+#c4-i-4{
+    display: block;
+    background: url(../icons/bottom-arrow.svg) no-repeat center center;
+    height: 36px;
+    width: 129px;
+}
+
+#c4-i-5{
+    display: block;
+    background: url(../icons/like.svg) no-repeat center center;
+    height: 80px;
+    width: 72px;
+}
+
+#c4-i-6{
+    display: block;
+    background: url(../icons/truck.svg) no-repeat center center;
+    height: 70px;
+    width: 87px;
+}
+/* body content 5 */
+#content-5{
+grid-area: content5;
+background-color: #00B8E2;
+display: grid;
+grid-template-areas: "c5-title" "c5-content";
+}
+
+#c5-title{
+    grid-area: c5-title;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.title{
+    font-family: "Myriad-B";
+    font-size: 30px;
+    color: var(--icolor);
+}
+
+.subtitle{
+    font-family: Myriad;
+    font-size: 16px;
+    color: var(--icolor);
+}
+
+#c5-content{
+    grid-area: c5-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#icon1{
+    background-image:url(../icons/person.svg); 
+    background-repeat: no-repeat;
+    margin-top: 17px;
+    margin-bottom: 16px;
+    margin-left: 12px;
+    background-position: 2px 3px;
+}
+#icon2{
+    background-image:url(../icons/message.svg); 
+    background-repeat: no-repeat;
+    margin-top: 17px;
+    margin-bottom: 16px;
+    margin-left: 12px;
+    background-position: 2px 3px;
+}
+#icon3{
+    background-image:url(../icons/phone.svg); 
+    background-repeat: no-repeat;
+    margin-top: 17px;
+    margin-bottom: 16px;
+    margin-left: 12px;
+    background-position: 2px 3px;
+}
+
+
+.input{
+    height: 50px;
+    width: 296px;
+    border-color: var(--icolor);
+}
+
+#c5-button {
+	background-color:transparent;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Myriad;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+#content-6{
+    grid-area: content6;
+
 }
