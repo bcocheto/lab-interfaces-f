@@ -23,6 +23,7 @@ body{
     margin: 0px;
     padding: 0px;
     text-align: center;
+    height: 500vh;
     }
 
 /* header */
@@ -626,8 +627,26 @@ input[type="text"]:focus {
 	text-shadow:0px 1px 0px #ffffff;
     align-self: center;
 }
-
+/* body content 6 */
 #content-6{
     grid-area: content6;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, auto);
+    margin-top: 86px;
+}
 
+#c6-box{
+    display: grid;
+    margin-left: 15%;
+    margin-top: 57px;
+    margin-bottom: 154px;
+    grid-template-columns: repeat(auto-fill, minmax(530px, 532px));
+    grid-template-rows: minmax(210px, 230px);
+}
+
+#c6-img-1{
+    background: url("../img/tabela.png") no-repeat center center;
+}
+#c6-img-2{
+    background: url("../img/grafico.png") no-repeat center center;
 }
