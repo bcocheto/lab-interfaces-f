@@ -22,8 +22,22 @@
         </div>
     </section>
     <section id="content-1">
-        <div id="img-1">
+        <div class="slide-show">
+            <ul class="slides-list">
+                <li class="slide">
+                    <a id="img-1"></a>
+                </li>
+                <li class="slide">
+                    <img src="{{ url_for('static', filename='img/slide.jpg') }}" />
+                </li>
+                <li class=" slide">
+                    <img src="" />
+                </li>
+            </ul>
         </div>
+        <input type="radio" class="slide-controller" name="slide" />
+        <input type="radio" class="slide-controller" name="slide" />
+        <input type="radio" class="slide-controller" name="slide" />
     </section>
     <section id="content-2">
         <div id="c2-title-box">
@@ -75,18 +89,50 @@
                 vitae quam ac lectus fermentum viverra. Vestibulum eu sem lobortis, rhoncus purus in, mattis augue.
                 Sed eu libero at arcu dictum rhoncus. Vestibulum at tempus felis. Vestibulum mattis tincidunt
                 eleifend.</a>
-            <a id="c3-info"></a>
+            <img id="c3-info" class="img" src="{{url_for('static', filename='img/layout-onepage-graphs.png')}}">
         </div>
     </section>
     <section id="content-4">
         <a id="c4-title">COMO FUNCIONA?</a>
         <div id="c4-content">
-            <a id="c4-icons">
+
+            <div id="c4-card">
                 <a id="c4-i-1"></a>
-                <a id="c4-i-2"></a>
+                <a class="title-black">PASSO 1</a>
+                <a class="subtitle-black">Donec posuere, libero in tincidunt consectetur, velit diam lacinia magna,
+                    ut dignissim ligula est at erat.</a>
+            </div>
+
+            <a id="c4-i-2"></a>
+
+            <div id="c4-card">
                 <a id="c4-i-3"></a>
-            </a>
-            <a id="c4-texts"></a>
+                <a class="title-black">PASSO 2</a>
+                <a class="subtitle-black">Donec posuere, libero in tincidunt consectetur, velit diam lacinia magna,
+                    ut dignissim ligula est at erat.</a>
+            </div>
+
+            <a id="c4-i-4"></a>
+
+            <div id="c4-card">
+                <a id="c4-i-5"></a>
+                <a class="title-black">PASSO 3</a>
+                <a class="subtitle-black">Donec posuere, libero in tincidunt consectetur, velit diam lacinia magna,
+                    ut dignissim ligula est at erat.</a>
+            </div>
+
+            <a id="c4-i-2"></a>
+
+            <div id="c4-card">
+                <a id="c4-i-6"></a>
+                <a class="title-black">PASSO 4</a>
+                <a class="subtitle-black">Donec posuere, libero in tincidunt consectetur, velit diam lacinia magna,
+                    ut dignissim ligula est at erat.</a>
+            </div>
+
+        </div>
+        <div id="c4-button">
+            <a class="c4-button">LEIA MAIS</a>
         </div>
     </section>
     <section id="content-5">
@@ -95,9 +141,18 @@
             <a class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a>
         </div>
         <div id="c5-content">
-            <input id="icon1" class="input" type="text" placeholder="Nome" />
-            <input id="icon2" class="input" type="text" placeholder="Email" />
-            <input id="icon3" class="input" type="text" placeholder="Telefone" />
+            <div class="inputWithIcon">
+                <input type="text" placeholder="Nome">
+                <i id="icon1" aria-hidden="true"></i>
+            </div>
+            <div class="inputWithIcon">
+                <input type="text" placeholder="Email">
+                <i id="icon2" aria-hidden="true"></i>
+            </div>
+            <div class="inputWithIcon">
+                <input type="text" placeholder="Telefone">
+                <i id="icon3" aria-hidden="true"></i>
+            </div>
             <a id="c5-button">ENVIAR</a>
         </div>
     </section>

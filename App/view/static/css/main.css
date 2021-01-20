@@ -4,7 +4,7 @@
     --icolor: #FAFAFA;
     --iheight: 48px;
     --iwidth: 23px;
-    
+
 }
 
 /* fontes custom */
@@ -22,8 +22,8 @@
 body{
     margin: 0px;
     padding: 0px;
-    height: 200vh;
-}
+    text-align: center;
+    }
 
 /* header */
 #header{
@@ -137,11 +137,31 @@ body{
 
 #img-1{
     display: block;
-    background: url('../img/img-1.svg') no-repeat center center;
-    margin-top: 5px;
-    width: 100%;
-    max-width: 100vw;
-    height: auto;
+    background: url('../img/slide.jpg') no-repeat center center;
+}
+
+.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
+.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
+
+.slide-show{
+  overflow: hidden;
+}
+
+.slides-list{
+  --selected-item: 1;
+  --total-items: 3;
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+  left: calc(var(--selected-item) * -100%);
+  width: calc(var(--total-items) * 100%);
+  transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
 }
 
 /* body content-2 */
@@ -179,7 +199,7 @@ body{
     flex-wrap: wrap;
     max-width: 1056.28px;
     flex-direction: row;
-    margin-left: 15vw;
+    margin-left: 6vw;
     justify-content: space-around;
 }
 
@@ -321,7 +341,6 @@ body{
 }
 
 #c3-img{
-    display: block;
     background: url(../img/sobre.jpg) no-repeat center center;
     max-width: 851px;
     min-width: 200px;
@@ -335,35 +354,47 @@ body{
     margin-left: 40px;
     grid-template-areas: "c3-t" "c3-tx" "c3-info";
     grid-template-columns: 1fr;
+    justify-self: start;
 }
 
 #c3-t{
     grid-area: c3-t;
-    font-family: Arial;
+    font-family: Myriad;
     font-weight: bold;
     color: var(--icolor);
     font-size: 30px;
+    justify-self: start;
 }
 
 #c3-tx{
     margin-top: 19px;
     color: var(--icolor);
     grid-area: c3-tx;
-    font-family: Arial;
+    font-family: Myriad;
     font-size: 14px;
+    justify-self: stretch;
 
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
 }
 
 #c3-info{
     /* n sei pq n quer funcionar */
-    margin-top: 20px;
-    margin-bottom: 70px;
+    /* display: block;
     grid-area: c3-info;
     background: url(../img/layout-onepage-graphs.png) no-repeat center center;
     max-width: 580px;
     min-width: 200px;
     max-height: 75px;
     min-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    justify-self: stretch; */
+    margin-bottom: 55px;
+    margin-top: 23px;
 }
 
 #content-4{
@@ -384,58 +415,93 @@ body{
 #c4-content{
     grid-area: c4-content;
     display: grid;
-    grid-area: "c4-icons" "c4-texts";
+    grid-template-columns: repeat(auto-fill, 230px 120px);
+    margin: 10px;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
-#c4-icons{
-    grid-area: c4-icons;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
+#c4-card{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(10px, 87px));
+    grid-template-columns: 1fr;
 }
 
 #c4-i-1{
     display: block;
     background: url(../icons/world.svg) no-repeat center center;
-    height: 86px;
-    width: 86px;
+    /* height: 86px;
+    width: 86px; */
 }
 
 #c4-i-2{
     display: block;
-    background: url(../icons/top-arrow.svg) no-repeat center center;
-    width: 127.6px;
-    height: 36px;
+    background: url(../icons/top-arrow.svg) no-repeat top center;
+    /* width: 127.6px;
+    height: 36px; */
 }
 
 #c4-i-3{
     display: block;
     background: url(../icons/market-car.svg) no-repeat center center;
-    width: 72px;
-    height: 74px;
+    /* width: 72px;
+    height: 74px; */
 }
 
 #c4-i-4{
     display: block;
-    background: url(../icons/bottom-arrow.svg) no-repeat center center;
-    height: 36px;
-    width: 129px;
+    background: url(../icons/bottom-arrow.svg) no-repeat bottom center;
+    /* height: 36px;
+    width: 129px; */
 }
 
 #c4-i-5{
     display: block;
     background: url(../icons/like.svg) no-repeat center center;
-    height: 80px;
-    width: 72px;
+    /* height: 80px;
+    width: 72px; */
 }
 
 #c4-i-6{
     display: block;
+    object-fit: cover;
     background: url(../icons/truck.svg) no-repeat center center;
-    height: 70px;
-    width: 87px;
+    /* height: 70px;
+    width: 87px; */
 }
+
+#c4-button{
+    grid-area: c4-button;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    justify-content: center;
+   
+}
+
+.c4-button {
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background-color:#089c03;
+	border:1px solid #089c03;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Myriad;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+.c4-button:hover {
+	background-color:#72b352;
+}
+.c4-button:active {
+	position:relative;
+	top:1px;
+}
+
 /* body content 5 */
 #content-5{
 grid-area: content5;
@@ -458,50 +524,97 @@ grid-template-areas: "c5-title" "c5-content";
     color: var(--icolor);
 }
 
+.title-black{
+    font-family: "Myriad-B";
+    font-size: 30px;
+}
+
 .subtitle{
     font-family: Myriad;
     font-size: 16px;
     color: var(--icolor);
 }
 
+.subtitle-black{
+    font-family: Myriad;
+    font-size: 16px;
+}
+
 #c5-content{
     grid-area: c5-content;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 296px);
+    margin: 10px;
+    box-sizing: border-box;
     justify-content: center;
 }
 
 #icon1{
-    background-image:url(../icons/person.svg); 
-    background-repeat: no-repeat;
-    margin-top: 17px;
-    margin-bottom: 16px;
-    margin-left: 12px;
-    background-position: 2px 3px;
+    display: block;
+    background:url(../icons/person.svg) no-repeat center center;
+    height: 21px;
+    width: 19px;
 }
 #icon2{
-    background-image:url(../icons/message.svg); 
-    background-repeat: no-repeat;
-    margin-top: 17px;
-    margin-bottom: 16px;
-    margin-left: 12px;
-    background-position: 2px 3px;
+    background:url(../icons/message.svg) no-repeat center center;
+    height: 15px;
+    width: 21px;
 }
 #icon3{
-    background-image:url(../icons/phone.svg); 
-    background-repeat: no-repeat;
-    margin-top: 17px;
-    margin-bottom: 16px;
-    margin-left: 12px;
-    background-position: 2px 3px;
+    background:url(../icons/phone.svg) no-repeat center center;
+    height: 19px;
+    width: 18px;
+}
+input[type="text"] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
 
-
-.input{
-    height: 50px;
-    width: 296px;
-    border-color: var(--icolor);
+input[type="text"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
 }
+
+.inputWithIcon input[type="text"] {
+  padding-left: 40px;
+}
+
+.inputWithIcon {
+  position: relative;
+  margin: 19px;
+}
+
+.inputWithIcon i {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.inputWithIcon input[type="text"]:focus + i {
+  color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg i {
+  background-color: #aaa;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.inputWithIcon.inputIconBg input[type="text"]:focus + i {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
 
 #c5-button {
 	background-color:transparent;
@@ -509,9 +622,9 @@ grid-template-areas: "c5-title" "c5-content";
 	color:#ffffff;
 	font-family:Myriad;
 	font-size:13px;
-	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
+    align-self: center;
 }
 
 #content-6{
